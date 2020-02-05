@@ -1,0 +1,14 @@
+extends layout
+block content
+
+	h1 Recipes
+	ul
+		each recipe in recipes
+			h2=recipe.title
+			p=recipe.content
+			a(href=`/users/${userId}/recipes/${recipe._id}/delete`)=" ❌"
+			a(href=`/users/${userId}/recipes/${recipe._id}/edit`)=" ✏️"
+
+
+
+	a(href=`/users/${userId}/newRecipe`)=" Create Recipe"

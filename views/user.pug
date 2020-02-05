@@ -1,0 +1,6 @@
+extends layout
+block content
+
+	p HELLO #{user.name}!!!
+
+	a(href='/users/' + user._id + '/recipes')=" View Recipes"
